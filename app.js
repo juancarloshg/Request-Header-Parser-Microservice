@@ -3,7 +3,7 @@ var app = express();
 
 app.get('/', function (req, res) {
 	res.json({
-		ip: req.ip,
+		ip: req.connection.remoteAddress,
 		language: req.headers["accept-language"],
 		browser: req.headers['user-agent']
 	});
